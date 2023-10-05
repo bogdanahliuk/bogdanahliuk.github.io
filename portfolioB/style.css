@@ -1,0 +1,391 @@
+html {
+  font-size: 6px;
+  font-family: Montserrat;
+  font-weight: 400;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+header {
+  height: 8vh;
+  padding: 0 3rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.check_btn {
+  border-radius: 15px;
+  padding: 0.7rem 2.4rem;
+  background-color: black;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.title {
+  width: 50%;
+  text-align: end;
+  font-size: 9.6rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  width: 50%;
+  font-size: 6rem;
+  font-weight: 500;
+  text-align: end;
+}
+
+.bottom_row {
+  padding: 2rem 4rem;
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a.scroll_btn {
+  font-size: 1.5rem;
+  color: black;
+  margin-right: 3rem;
+}
+
+a.scroll_btn::before {
+  content: url(./img/Arrow\ 1.png);
+  margin-right: 3px;
+}
+
+.photo_container {
+  width: 100%;
+}
+
+.photo_container img {
+  width: 33.17%;
+  min-width: 250px;
+  margin-bottom: 2rem;
+  /* margin: 4.5rem 0; */
+}
+
+/* #img2{
+  width: 33.5%;
+} */
+
+.about_me {
+  display: flex;
+  padding: 2rem 5rem;
+  background-color: black;
+  color: white;
+}
+
+.about_me_text {
+  font-size: 4.8rem;
+  width: 70%;
+  font-family: Inter;
+  font-weight: 600;
+  padding: 3rem 0;
+}
+
+.about_me_title {
+  font-size: 2rem;
+  font-family: Inter;
+  width: 20%;
+  padding-left: 4rem;
+  padding-top: 2rem;
+}
+
+.container_pg2 {
+  display: flex;
+  padding: 2rem;
+  height: fit-content;
+}
+
+.wid_text_box {
+  width: 70%;
+  margin: 0 5%;
+}
+
+.wid_text_box > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.row_text {
+  width: 40%;
+  font-size: 2.4rem;
+}
+
+.line4 {
+  width: 100%;
+  margin: 4rem 0;
+}
+
+.what_i_do {
+  width: 20%;
+  font-size: 2rem;
+  padding: 5rem 0 0 3rem;
+}
+
+.line3 {
+  height: 70%;
+}
+
+.row_text > span {
+  font-weight: 700;
+}
+
+.line7 {
+  width: 100%;
+}
+
+.word_line {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  font-size: 6.4rem;
+  font-weight: 700;
+  margin: 5rem 0;
+  text-wrap: nowrap;
+}
+
+.container_pg3 {
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem 10rem;
+}
+.card {
+  width: 30%;
+  text-align: center;
+  padding: 1rem 5rem;
+}
+.card_title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card_text {
+  font-size: 2rem;
+}
+
+#ct1::after {
+  background-image: url("./img/creative_icon.png");
+  background-size: 60px 60px;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  content: "";
+  margin-left: 2rem;
+}
+
+#ct2::after {
+  background-image: url("./img/visual_icon.png");
+  background-size: 60px 60px;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  content: "";
+  margin-left: 2rem;
+}
+
+#ct3::after {
+  background-image: url("./img/technical_icon.png");
+  background-size: 60px 60px;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  content: "";
+  margin-left: 2rem;
+}
+
+.container_pg4 {
+  display: flex;
+  justify-content: space-between;
+  padding: 6rem 10rem;
+}
+
+.container_pg4 > img {
+  width: 33%;
+}
+
+footer {
+  background-color: black;
+  padding: 10rem 20rem;
+  color: white;
+}
+
+.footer_title {
+  font-size: 3.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.footer_list {
+  list-style-type: none;
+  display: flex;
+  width: 60%;
+  justify-content: space-around;
+  margin: 0 auto;
+  padding: 5rem 0 0 0;
+}
+
+.footer_list img {
+  width: 6rem;
+  transition: all 0.3s linear;
+}
+
+.footer_list img:hover {
+  width: 7rem;
+}
+
+@media screen and (min-width: 1400px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 3px;
+  }
+
+  .check_btn {
+    font-size: 2rem;
+  }
+
+  .title {
+    width: 60%;
+    font-size: 7rem;
+  }
+
+  .subtitle {
+    width: 60%;
+    font-size: 4.5rem;
+  }
+
+  .location {
+    font-size: 3rem;
+  }
+
+  a.scroll_btn {
+    font-size: 3rem;
+  }
+
+  .photo_container img {
+    min-width: 0;
+  }
+
+  .about_me {
+    height: 20vh;
+  }
+
+  .about_me_text {
+    font-size: 3.5rem;
+    padding: 5rem;
+  }
+
+  .v_line {
+    height: 80%;
+    margin: auto 0;
+  }
+
+  .about_me_title {
+    padding-top: 5rem;
+  }
+
+  .container_pg2 {
+    height: 47vh;
+    padding: 5rem 2rem;
+  }
+
+  .wid_text_box{
+    margin: auto 5%;
+  }
+
+  .wid_text_box > div {
+    flex-direction: column;
+  }
+
+  .wid_text_box > div > img {
+    height: 1px;
+    margin: 4rem 0;
+  }
+
+  .row_text {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .container_pg2 > img {
+    height: 70%;
+    margin: auto 0;
+  }
+
+  .what_i_do {
+    padding: 0;
+    margin: auto 0;
+    padding-left: 3rem;
+    font-size: 2.5rem;
+  }
+
+  .container_pg3 {
+    flex-direction: column;
+  }
+
+  .container_pg3 > img {
+    height: 1px;
+    margin: 3rem 0;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .line7 {
+    width: 80%;
+    margin: 0 10%;
+  }
+
+  .container_pg4 {
+    flex-direction: column;
+  }
+
+  .container_pg4 > img {
+    width: 60%;
+    margin: 2rem auto;
+  }
+
+  #ct1::after {
+    background-size: 20px 20px;
+    width: 20px;
+    height: 20px;
+  }
+
+  #ct2::after {
+    background-size: 20px 20px;
+    width: 20px;
+    height: 20px;
+  }
+
+  #ct3::after {
+    background-size: 20px 20px;
+    width: 20px;
+    height: 20px;
+  }
+}
