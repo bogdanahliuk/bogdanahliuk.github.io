@@ -293,6 +293,9 @@ footer {
 
 .work_list_box {
   margin-top: 5rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .topnav {
@@ -302,6 +305,7 @@ footer {
   position: relative;
   z-index: 2;
   border-radius: 15px;
+  margin-bottom: 1rem;
 }
 
 /* Hide the links inside the navigation menu (except for logo/home) */
@@ -334,11 +338,6 @@ footer {
   padding-bottom: 0.5rem;
 }
 
-.topnav a.icon img {
-  width: 1.4rem;
-  height: 1.4rem;
-}
-
 /* Style the active link (or home/logo) */
 .work_name {
   background-color: #070707;
@@ -351,6 +350,27 @@ footer {
   color: #070707;
   border: 1px solid #070707;
 }
+
+.lab_link {
+  width: 32%;
+  text-align: center;
+  background-color: #070707;
+  color: black;
+  padding: 0 1rem;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  height: 7rem;
+}
+
+.lab_link > a {
+  display: block;
+  color: #fffdf5;
+  font-weight: 600;
+  padding: 1.6rem 0;
+  text-decoration: none;
+}
+
 
 @media screen and (min-width: 1500px) {
   html {
@@ -515,6 +535,11 @@ footer {
 
   .first_page {
     height: 35vh;
+  }
+
+  .lab_link{
+    width: 100%;
+    font-size: 3.5rem;
   }
 }
 
