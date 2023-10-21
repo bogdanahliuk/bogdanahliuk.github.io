@@ -8,7 +8,7 @@ button.addEventListener('click', () => {
         cells[i].innerHTML = '';
         cells[i].appendChild(document.getElementById(i));
     }
-    for(let i = 3; i < 6; i++){
+    for(let i = 0; i < 3; i++){
         cells[i].innerHTML = '';
         cells[i].appendChild(document.getElementById(i));
     }
