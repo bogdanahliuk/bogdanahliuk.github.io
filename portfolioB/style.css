@@ -381,6 +381,12 @@ footer {
   }
 }
 
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 5px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   html {
     font-size: 3px;
@@ -534,12 +540,18 @@ footer {
   }
 
   .first_page {
-    height: 35vh;
+    height: 60vh;
   }
 
   .lab_link{
     width: 100%;
     font-size: 3.5rem;
+  }
+}
+
+@media  screen and (max-width: 425px) {
+  .first_page{
+    height: 35vh;
   }
 }
 
