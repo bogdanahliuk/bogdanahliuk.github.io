@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>3</title>
+  </head>
+  <body>
+    <div>
+      <input type="text" id="input" placeholder="Введіть текст" />
+      <button>Друкувати</button>
+    </div>
+    <p id="output"></p>
+
+    <script>
+      const start_btn = document.querySelector("button");
+      const input = document.getElementById("input");
+      const output = document.getElementById("output");
+      function writer(text, i, letter) {
+        if (i < text.length) {
+          letter.innerHTML += text.charAt(i);
+          i++;
+          setTimeout(function () {
+            writer(text, i, letter);
+          }, 75);
+        }
+      }
+      start_btn.addEventListener("click", () => {
+        output.innerHTML = "";
+        writer(input.value, 0, output);
+      });
+    </script>
+  </body>
+</html>

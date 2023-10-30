@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<htm>
+  <head>
+    <title>4</title>
+  </head>
+  <body>
+    <div>
+      <input type="text" id="suma" placeholder="Введіть суму" />
+      <button id="start">start</button>
+    </div>
+    <p id="info"></p>
+
+    <script>
+      let suma = document.getElementById("suma");
+      let start = document.getElementById("start");
+      let info = document.getElementById("info");
+
+      function Random(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1) + min);
+      }
+
+      function result() {
+        let rand_num = Random(-5, 5);
+        if (rand_num > 0) {
+          info.innerHTML = "Ви виграли: " + rand_num * suma.value;
+        } else {
+          info.innerHTML = "Ви програли!";
+        }
+      }
+
+      start.addEventListener("click", () => {
+        info.innerHTML = "";
+        setTimeout(result, 1000);
+      });
+    </script>
+  </body>
+</html>

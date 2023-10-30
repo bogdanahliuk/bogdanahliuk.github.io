@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>2</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: space-around;
+        height: 20vh;
+        align-items: center;
+        flex-direction: column;
+      }
+      input {
+        size: 10;
+        text-align: center;
+        font-size: 25px;
+        background-color: transparent;
+        border: 2px solid black;
+        padding: 5px 0;
+      }
+      button {
+        size: 10;
+        text-align: center;
+        font-size: 25px;
+        background-color: transparent;
+        border: 2px solid black;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="chas" />
+    <button id="update_btn">Оновити час</button>
+
+    <script>
+      let chas = document.getElementById("chas");
+      function setTime() {
+        const time = new Date();
+        let h = time.getHours();
+        let min = time.getMinutes();
+        let sec = time.getSeconds();
+
+        if (h < 10) {
+          h = "0" + h;
+        }if (min < 10) {
+          min = "0" + min;
+        }if (sec < 10) {
+          sec = "0" + sec;
+        }
+        setTimeout(setTime, 1000);
+        return h + ":" + min + ":" + sec;
+      }
+      chas.value = setTime();
+      document
+        .getElementById("update_btn")
+        .addEventListener("click", function () {
+          chas.value = setTime();
+        });
+    </script>
+  </body>
+</html>

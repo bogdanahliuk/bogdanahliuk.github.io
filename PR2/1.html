@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>1</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            height: 20vh;
+            align-items: center;
+        }
+        input{
+            size: 10;
+            text-align: center;
+            font-size: 25px;
+            background-color: transparent;
+            border: 2px solid black;
+            padding: 5px 0;
+        }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="chas">
+
+    <script>
+      function setTime() {
+        const time = new Date();
+        let h = time.getHours();
+        let min = time.getMinutes();
+        let sec = time.getSeconds();
+
+        if (h < 10) {
+          h = "0" + h;
+        }if (min < 10) {
+          min = "0" + min;
+        }if (sec < 10) {
+          sec = "0" + sec;
+        }
+        document.getElementById("chas").value = h + ":" + min + ":" + sec;
+        setTimeout(setTime, 1000);
+      }
+      setTime();
+    </script>
+  </body>
+</html>
