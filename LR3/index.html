@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Generator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="tabs">
+        <div class="tab whiteborder">border-radius</div>
+        <div class="tab">color</div>
+        <div class="tab">cursor</div>
+        <div class="tabContent">
+            <div>
+                <div>Верхній лівий кут:</div>
+                <input type="range" id="rtl" min="0" max="100" value="0" oninput="generate()">
+                <input id="ttl" type="number" value="0" oninput="change()">
+            </div>
+            <div>
+                <div>Верхній правий кут:</div>
+                <input type="range" id="rtr" min="0" max="100" value="0" oninput="generate()">
+                <input id="ttr" type="number" value="0" oninput="change()">
+            </div>
+            <div>
+                <div>Нижній правий кут:</div>
+                <input type="range" id="rbr" min="0" max="100" value="0" oninput="generate()">
+                <input id="tbr" type="number" value="0" oninput="change()">
+            </div>
+            <div>
+                <div>Нижній лівий кут:</div>
+                <input type="range" id="rbl" min="0" max="100" value="0" oninput="generate()">
+                <input id="tbl" type="number" value="0" oninput="change()">
+            </div>
+            <div id="block"></div>
+            <div>CSS Code:
+                <textarea type="text" id="code" readonly></textarea>
+            </div>
+        </div>
+        <div class="tabContent">
+            <div>
+                <div>Червоний</div>
+                <input type="range" id="rRed" min="0" max="255" value="0" oninput="changeColor1()">
+                <input id="tRed" type="number" value="0" oninput="changeColor2()">
+            </div>
+            <div>
+                <div>Зелений</div>
+                <input type="range" id="rGreen" min="0" max="255" value="0" oninput="changeColor1()">
+                <input id="tGreen" type="number" value="0" oninput="changeColor2()">
+            </div>
+            <div>
+                <div>Синій</div>
+                <input type="range" id="rBlue" min="0" max="255" value="0" oninput="changeColor1()">
+                <input id="tBlue" type="number" value="0" oninput="changeColor2()">
+            </div>
+            <div>
+                <div>Прозорість</div>
+                <input type="range" id="rOpacity" min="0" max="10" value="0" oninput="changeColor1()">
+                <input id="tOpacity" type="number" value="0" oninput="changeColor2()">
+            </div>
+            <div>
+                Колір тексту
+                <input type="color" id="txtColor" oninput="changeColor1()">
+            </div>
+            <div id="block1">Lorem ipsum dolor sit amet consectetur adipisicing elit. At temporibus eos tempore nulla, inventore atque odit quo commodi, facilis, exercitationem aspernatur debitis sapiente illo dicta itaque autem ipsum vitae beatae?</div>
+            <div>CSS Code:
+                <textarea type="text" id="code1" readonly></textarea>
+            </div>
+        </div>
+        <div class="tabContent">
+            <div>Курсор
+                <select name="" id="cursorType" onchange="changeCursor()">
+                    <option value="auto" selected>auto</option>
+                    <option value="pointer">pointer</option>
+                    <option value="crosshair">crosshair</option>
+                    <option value="zoom-in">zoom-in</option>
+                    <option value="zoom-out">zoom-out</option>
+                    <option value="none">none</option>
+                </select>
+            </div>
+            <div id="block2"></div>
+            <div>CSS Code:
+                <textarea type="text" id="code2" readonly></textarea>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
