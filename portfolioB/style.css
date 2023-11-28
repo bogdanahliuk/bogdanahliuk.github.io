@@ -75,13 +75,14 @@ a.scroll_btn::before {
 
 .photo_container {
   width: 100%;
-  background-color: #070707;
+  display: flex;
+  justify-content: space-between;
   max-height: 55vh;
   overflow: hidden;
 }
 
 .photo_container img {
-  width: 100%;
+  width: 33.1%;
   min-width: 250px;
   /* margin: 4.5rem 0; */
 }
@@ -104,7 +105,6 @@ a.scroll_btn::before {
   font-family: Inter;
   font-weight: 600;
   padding: 3rem 0;
-  margin: auto 0;
 }
 
 .about_me_title {
@@ -277,100 +277,86 @@ footer {
   width: 7rem;
 }
 
-/* The container must be positioned relative: */
-.custom-select {
-  position: relative;
-  font-family: Arial;
-}
-
-.custom-select select {
-  display: none; /*hide original SELECT element: */
-}
-
-.select-selected {
-  background-color: #070707;
-}
-
 .work_list_box {
   margin-top: 5rem;
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
-.topnav {
-  width: 32%;
-  overflow: hidden;
-  background-color: #070707;
-  position: relative;
-  z-index: 2;
-  border-radius: 15px;
-  margin-bottom: 1rem;
-}
-
-/* Hide the links inside the navigation menu (except for logo/home) */
-.topnav #myLinks {
-  display: none;
-  position: relative;
-  z-index: 10;
-}
-
-/* Style navigation menu links */
-.topnav a {
-  color: #fffdf5;
-  padding: 1.6rem 0.9rem;
-  text-decoration: none;
-  font-size: 3rem;
-  display: block;
-  font-weight: 600;
-}
-
-/* Style the hamburger menu */
-.topnav a.icon {
-  background: transparent;
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
+.work_list_row{
   width: 100%;
-  height: 100%;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-/* Style the active link (or home/logo) */
-.work_name {
-  background-color: #070707;
-  color: #fffdf5;
-  text-align: center;
-}
-
-#myLinks a:hover {
-  background-color: #fffdf5;
-  color: #070707;
-  border: 1px solid #070707;
-}
-
-.lab_link {
-  width: 32%;
-  text-align: center;
-  background-color: #070707;
-  color: black;
-  padding: 0 1rem;
-  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 1rem;
-  font-size: 3rem;
-  height: 7rem;
 }
 
-.lab_link > a {
+.hide {
+  display: none;
+}
+
+.hide-menu {
+  position: absolute;
+  left: -9999px;
+}
+
+.portfolio_text > .list_box:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.list_box {
+  width: 32%;
+}
+
+.list_btn {
+  background-color: #070707;
+  width: 100%;
+  font-size: 2rem;
+  text-align: center;
+  padding: 0.5rem 0;
+  border: 1px solid #070707;
+  border-radius: 10px;
+  color: white;
+}
+
+.task_menu {
+  background-color: #070707;
+  width: 100%;
+  border: 1px solid #070707;
+  font-size: 2rem;
+  color: white;
+  border-top: none;
+  display: none;
+}
+.task_menu > ul {
+  list-style-type: none;
+  width: 100%;
+  text-align: center;
+}
+
+.task_menu a {
   display: block;
-  color: #fffdf5;
-  font-weight: 600;
-  padding: 1.6rem 0;
-  text-decoration: none;
+  color: white;
+  width: 100%;
+  padding: 0.5rem 0;
 }
 
+.open .list_btn {
+  border-bottom: none;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.open .task_menu {
+  display: block;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.task_menu li:hover {
+  background-color: white;
+  color: #070707;
+}
 
 @media screen and (min-width: 1500px) {
   html {
@@ -387,62 +373,54 @@ footer {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   html {
-    font-size: 3px;
-  }
-
-  .check_btn {
-    font-size: 2rem;
+    font-size: 5px;
   }
 
   .title {
     width: 60%;
-    font-size: 7rem;
+    font-size: 9rem;
   }
 
   .subtitle {
-    width: 60%;
-    font-size: 4.5rem;
+    width: 70%;
+    font-size: 6.5rem;
   }
 
   .location {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 
   a.scroll_btn {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 
   .photo_container img {
     min-width: 0;
   }
 
-  .about_me {
+  header {
     height: 10vh;
   }
 
-  .about_me_text {
-    font-size: 3.5rem;
-    padding: 5rem;
+  .check_btn {
+    font-size: 3rem;
+    padding: 1rem 2.5rem;
   }
 
-  .v_line {
-    height: 80%;
-    margin: auto 0;
+  .first_page {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
-  .about_me_title {
-    padding-top: 5rem;
-  }
-
-  .container_pg2 {
-    height: 47vh;
-    padding: 5rem 5%;
-  }
-
-  .wid_text_box {
-    margin: auto 5%;
+  .first_page > div:first-child {
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .wid_text_box > div {
@@ -457,23 +435,22 @@ footer {
   .row_text {
     width: 100%;
     margin: 0 auto;
-    font-size: 3.5rem;
+    font-size: 4rem;
   }
 
-  .container_pg2 > img {
-    height: 70%;
-    margin: auto 0;
+  .container_pg2 {
+    margin: 5rem 0;
   }
 
   #mobile_line {
     opacity: 1;
+    margin-top: 5rem;
   }
 
   .what_i_do {
     padding: 0;
     margin: auto 0;
-    padding-left: 3rem;
-    font-size: 2.5rem;
+    font-size: 4rem;
   }
 
   .container_pg3 {
@@ -490,11 +467,11 @@ footer {
   }
 
   .card_text {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 
   .card_title {
-    font-size: 3.4rem;
+    font-size: 4.4rem;
   }
 
   .line7 {
@@ -511,75 +488,158 @@ footer {
     margin: 2rem 0;
   }
 
-  .topnav {
+  .list_box{
     width: 100%;
-    border-radius: 10px;
   }
 
-  .topnav a {
-    text-align: center;
-    font-size: 3.5rem;
+  .list_box:not(:last-child){
+    margin-bottom: 1rem;
   }
 
-  #ct1::after {
-    background-size: 20px 20px;
-    width: 20px;
-    height: 20px;
+  .list_btn{
+    font-size: 4rem;
   }
 
-  #ct2::after {
-    background-size: 20px 20px;
-    width: 20px;
-    height: 20px;
+  .task_menu{
+    font-size: 4rem;
   }
 
-  #ct3::after {
-    background-size: 20px 20px;
-    width: 20px;
-    height: 20px;
+
+}
+
+@media screen and (max-width: 435px) {
+  html {
+    font-size: 4px;
+  }
+  .about_me_title {
+    font-size: 2.5rem;
+  }
+
+  .title {
+    font-size: 7rem;
+    width: 70%;
+  }
+
+  .subtitle {
+    width: 75%;
+    font-size: 5.5rem;
+  }
+
+  header {
+    height: 10vh;
+  }
+
+  .check_btn {
+    font-size: 2.5rem;
+    padding: 1rem 2.5rem;
+  }
+
+  .bottom_row {
+    font-size: 3rem;
+  }
+
+  a.scroll_btn {
+    font-size: 3rem;
+  }
+
+  .about_me_text {
+    font-size: 4rem;
   }
 
   .first_page {
-    height: 60vh;
+    height: 90vh;
   }
 
-  .lab_link{
-    width: 100%;
-    font-size: 3.5rem;
+  .photo_container img {
+    min-width: unset;
+    width: 40%;
   }
-}
 
-@media  screen and (max-width: 425px) {
-  .first_page{
-    height: 35vh;
+  .first_page > div:first-child {
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
-}
 
-@media screen and (max-width: 389px) {
   .about_me {
-    height: 20vh;
+    height: 20%;
   }
 
-  .container_pg2 {
-    height: 80vh;
+  .photo_container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    max-height: unset;
+    height: 65%;
   }
 
-  .first_page {
-    height: 50vh;
+  #mobile_line {
+    margin: 5rem 5%;
+    margin-bottom: 0;
   }
 
-  .container_pg4 img {
-    width: 100%;
-    margin: 2rem 0;
-  }
-
-  .topnav {
-    width: 100%;
-    border-radius: 10px;
-  }
-
-  .topnav a {
-    text-align: center;
+  .row_text {
     font-size: 3.5rem;
+  }
+
+  .what_i_do {
+    font-size: 3rem;
+  }
+
+  .card_text {
+    font-size: 3rem;
+  }
+
+  .card_title {
+    font-size: 3.5rem;
+  }
+
+  #ct1::after,
+  #ct2::after,
+  #ct3::after {
+    width: 40px;
+    height: 40px;
+    margin-left: 1rem;
+    background-size: 40px 40px;
+  }
+
+
+  .list_btn{
+    font-size: 3rem;
+  }
+
+  .task_menu{
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 385px) {
+  html {
+    font-size: 3px;
+  }
+  .title {
+    font-size: 7rem;
+  }
+
+  .subtitle {
+    font-size: 5.5rem;
+  }
+
+  .photo_container img {
+    width: 33%;
+  }
+
+  .about_me_text {
+    font-size: 3.5rem;
+  }
+
+  #ct1::after,
+  #ct2::after,
+  #ct3::after {
+    width: 30px;
+    height: 30px;
+    margin-left: 1rem;
+    background-size: 30px 30px;
   }
 }
