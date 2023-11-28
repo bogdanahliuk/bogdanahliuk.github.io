@@ -79,6 +79,7 @@ a.scroll_btn::before {
   justify-content: space-between;
   max-height: 55vh;
   overflow: hidden;
+  background-color: #070707;
 }
 
 .photo_container img {
@@ -163,6 +164,7 @@ a.scroll_btn::before {
 
 .line7 {
   width: 100%;
+  height: 1px;
 }
 
 #mobile_line {
@@ -568,6 +570,7 @@ footer {
     justify-content: space-around;
     max-height: unset;
     height: 65%;
+    background-color: unset;
   }
 
   #mobile_line {
