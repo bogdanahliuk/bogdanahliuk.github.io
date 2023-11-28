@@ -171,12 +171,8 @@ a.scroll_btn::before {
 
 .word_line {
   width: 100%;
-  display: block;
-  overflow: hidden;
-  font-size: 6.4rem;
-  font-weight: 700;
   margin: 5rem 0;
-  text-wrap: nowrap;
+  overflow: hidden;
 }
 
 .container_pg3 {
@@ -552,7 +548,7 @@ footer {
 
   .photo_container img {
     min-width: unset;
-    width: 40%;
+    width: 38%;
   }
 
   .first_page > div:first-child {
